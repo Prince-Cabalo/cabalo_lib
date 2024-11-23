@@ -1,6 +1,6 @@
-# Library System with JWT
+# Library System with JSON WEB TOKEN
 
-A simple library management system utilizing JSON Web Tokens (JWT) for secure access. This project allows users to manage books and authors while maintaining security with token rotation, ensuring each token is single-use.
+This library management system uses JSON Web Tokens (JWT) to provide secure and streamlined access to a book and author database. With each user action, a new single-use token is issued, ensuring maximum security and preventing token reuse. The system supports a full range of management features, allowing users to safely add, update, view, and delete entries from the library catalog.
 
 ## Table of Contents
 - [Overview](#overview)
@@ -206,17 +206,12 @@ A simple library management system utilizing JSON Web Tokens (JWT) for secure ac
     "message": "Entry and related book/author deleted successfully.",
     "newToken": "<token-generated>"
   }
-  ```
+  
 
-## Usage Instructions
-1. Make sure the **`cabalo_lib.sql`** file is imported into your MySQL database. This file is located in the `cabalo_lib/database/cabalo_lib.sql` directory.
-2. Register a user using the [User Registration](#user-registration) endpoint, then authenticate with the [User Authentication](#user-authentication) endpoint.
-3. For adding, updating, viewing, or deleting entries:
-   - Use the **`<token-generated>`** obtained after authentication.
-   - In your API client (Postman, Thunderclient, etc.), go to the Headers section.
-   - Add **`Authorization`** as a header key and paste the `<token-generated>` in the value field.
-4. Customize the payloads to match your requirements and send your requests.
-```
+## General Tips
+1. Always ensure that you have the latest JWT token in the Authorization header for each action.
+2. Use Postman or Thunderclient for easier management of headers and tokens.
+3. Follow the response instructions if a new token is provided after each action.
 
 
 
