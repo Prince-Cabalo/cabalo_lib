@@ -69,7 +69,7 @@ A simple library management system utilizing JSON Web Tokens (JWT) for secure ac
   ```json
   {
     "status": "success",
-    "token": "<generated-token>",
+    "token": "<token-generated>",
     "data": null
   }
   ```
@@ -89,7 +89,7 @@ A simple library management system utilizing JSON Web Tokens (JWT) for secure ac
   {
     "status": "success",
     "Message": "User information updated successfully",
-    "newToken": "<generated-token>"
+    "newToken": "<token-generated>"
   }
   ```
 
@@ -98,7 +98,7 @@ A simple library management system utilizing JSON Web Tokens (JWT) for secure ac
 - **Payload**:
   ```json
   {
-    "userId": 5
+    "userId": 69
   }
   ```
 - **Response**:
@@ -106,7 +106,7 @@ A simple library management system utilizing JSON Web Tokens (JWT) for secure ac
   {
     "status": "success",
     "Message": "User deleted successfully",
-    "newToken": "<generated-token>"
+    "newToken": "<token-generated>"
   }
   ```
 
@@ -115,7 +115,7 @@ A simple library management system utilizing JSON Web Tokens (JWT) for secure ac
 - **Payload**:
   ```json
   {
-    "username": "admin123",
+    "username": "admin",
     "email": "admin@example.com"
   }
   ```
@@ -124,7 +124,7 @@ A simple library management system utilizing JSON Web Tokens (JWT) for secure ac
   {
     "status": "success",
     "Message": "Password reset instructions have been sent to your email",
-    "newToken": "<generated-token>"
+    "newToken": "<token-generated>"
   }
   ```
 
@@ -144,7 +144,7 @@ A simple library management system utilizing JSON Web Tokens (JWT) for secure ac
   {
     "status": "success",
     "Message": "The book has been added to the collection",
-    "newToken": "<generated-token>"
+    "newToken": "<token-generated>"
   }
   ```
 
@@ -163,7 +163,7 @@ A simple library management system utilizing JSON Web Tokens (JWT) for secure ac
   {
     "status": "success",
     "Message": "The book has been updated",
-    "newToken": "<generated-token>"
+    "newToken": "<token-generated>"
   }
   ```
 
@@ -172,7 +172,7 @@ A simple library management system utilizing JSON Web Tokens (JWT) for secure ac
 - **Payload**:
   ```json
   {
-    "collectionId": "16"
+    "collectionId": "69"
   }
   ```
 - **Response**:
@@ -181,13 +181,13 @@ A simple library management system utilizing JSON Web Tokens (JWT) for secure ac
     "status": "success",
     "data": [
       {
-        "bookid": 16,
+        "bookid": 69,
         "book_title": "sample bookname",
-        "authorid": 16,
+        "authorid": 69,
         "author_name": "sample authorname"
       }
     ],
-    "newToken": "<generated-token>"
+    "newToken": "<token-generated>"
   }
   ```
 
@@ -196,7 +196,7 @@ A simple library management system utilizing JSON Web Tokens (JWT) for secure ac
 - **Payload**:
   ```json
   {
-    "collectionId": 16
+    "collectionId": 69
   }
   ```
 - **Response**:
@@ -204,7 +204,7 @@ A simple library management system utilizing JSON Web Tokens (JWT) for secure ac
   {
     "status": "success",
     "message": "Entry and related book/author deleted successfully.",
-    "newToken": "<generated-token>"
+    "newToken": "<token-generated>"
   }
   ```
 
@@ -212,9 +212,9 @@ A simple library management system utilizing JSON Web Tokens (JWT) for secure ac
 1. Make sure the **`cabalo_lib.sql`** file is imported into your MySQL database. This file is located in the `cabalo_lib/database/cabalo_lib.sql` directory.
 2. Register a user using the [User Registration](#user-registration) endpoint, then authenticate with the [User Authentication](#user-authentication) endpoint.
 3. For adding, updating, viewing, or deleting entries:
-   - Use the **`<generated-token>`** obtained after authentication.
+   - Use the **`<token-generated>`** obtained after authentication.
    - In your API client (Postman, Thunderclient, etc.), go to the Headers section.
-   - Add **`Authorization`** as a header key and paste the `<generated-token>` in the value field.
+   - Add **`Authorization`** as a header key and paste the `<token-generated>` in the value field.
 4. Customize the payloads to match your requirements and send your requests.
 ```
 
