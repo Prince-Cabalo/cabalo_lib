@@ -9,8 +9,6 @@ This library management system uses JSON Web Tokens (JWT) to provide secure and 
   - [User Management](#user-management)
     - [User Registration](#user-registration)
     - [User Authentication](#user-authentication)
-    - [User Update](#user-update)
-    - [User Delete](#user-delete)
     - [Book Management](#book-management)
     - [Add Books with Author](#add-books-with-author)
     - [Update Books and Authors](#update-books-and-authors)
@@ -70,42 +68,6 @@ This library management system uses JSON Web Tokens (JWT) to provide secure and 
     "status": "success",
     "token": "<token-generated>",
     "data": null
-  }
-  ```
-
-#### User Update
-- **Endpoint**: `PUT /cabalo_lib/public/user/update`
-- **Payload**:
-  ```json
-  {
-    "userId": 5,
-    "newUsername": "newAdmin",
-    "newPassword": "new123"
-  }
-  ```
-- **Response**:
-  ```json
-  {
-    "status": "success",
-    "Message": "User information updated successfully",
-    "newToken": "<token-generated>"
-  }
-  ```
-
-#### User Delete
-- **Endpoint**: `DELETE /cabalo_lib/public/user/delete`
-- **Payload**:
-  ```json
-  {
-    "userId": 69
-  }
-  ```
-- **Response**:
-  ```json
-  {
-    "status": "success",
-    "Message": "User deleted successfully",
-    "newToken": "<token-generated>"
   }
   ```
 ### Book Management
